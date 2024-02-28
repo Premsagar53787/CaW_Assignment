@@ -2,13 +2,11 @@ import org.json.JSONException;
 import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.skyscreamer.jsonassert.JSONAssert;
-
 import java.util.Arrays;
 
 public class StepsToExecute {
     //Web driver initialisation.
     WebDriver driver;
-
     //For capturing screenshot calling the method by creating object
     Screenshot scr = new Screenshot();
 
@@ -47,7 +45,7 @@ public class StepsToExecute {
 
         WebElement textBox = driver.findElement(By.xpath("//textarea[contains(@id, \"jsondata\")]"));
         textBox.click();
-        scr.TakeScreenshoots(driver);
+        scr.TakeScreenshots(driver);
         Thread.sleep(5000);
         textBox.clear();
         System.out.println("Inserting data:");
@@ -72,7 +70,7 @@ public class StepsToExecute {
         driver.findElement(By.xpath("//*[@id=\"refreshtable\"]")).click();
         Thread.sleep(5000);
         System.out.println("Clicked on refresh table");
-        scr.TakeScreenshoots(driver);
+        scr.TakeScreenshots(driver);
 
         //5. The entered data will be populated in the table.
 
